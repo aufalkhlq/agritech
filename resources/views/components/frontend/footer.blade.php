@@ -158,34 +158,8 @@
                             </script>
                         </span>
                         FreshCart eCommerce HTML Template. All rights reserved. Powered by
-                        <a href="https://codescandy.com/">Codescandy</a>
                         .
                     </span>
-                </div>
-                <div class="col-lg-6 text-end mb-2 mb-lg-0">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item text-light">Payment Partners</li>
-                        <li class="list-inline-item">
-                            <a href="#!"><img src="../assets/images/payment/amazonpay.svg"
-                                    alt="" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#!"><img src="../assets/images/payment/american-express.svg"
-                                    alt="" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#!"><img src="../assets/images/payment//mastercard.svg"
-                                    alt="" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#!"><img src="../assets/images/payment/paypal.svg"
-                                    alt="" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#!"><img src="../assets/images/payment/visa.svg"
-                                    alt="" /></a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta content="Codescandy" name="author" />
     <title>@yield('title')</title>
+    <link href="{{ asset('assets/libs/dropzone/dist/min/dropzone.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/libs/tiny-slider/dist/tiny-slider.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/libs/slick-carousel/slick/slick.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/libs/slick-carousel/slick/slick-theme.css') }}" rel="stylesheet" />
@@ -53,9 +54,9 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light navbar-default py-0 py-lg-2 border-top navbar-offcanvas-color"
-aria-label="Offcanvas navbar large">
+        aria-label="Offcanvas navbar large">
 
-    @include('components.frontend.nav')
+        @include('components.frontend.nav')
 
     </nav>
     @yield('content')
