@@ -2,46 +2,47 @@
     <div class="navbar-vertical">
         <div class="px-4 py-5">
             <a href="{{route('home')}}" class="navbar-brand">
-                <img src="../assets/images/logo/freshcart-logo.svg" alt="" />
+                <img src="{{ asset("assets/images/logo/freshcart-logo.svg") }}" alt="" />
             </a>
         </div>
         <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
             <ul class="navbar-nav flex-column" id="sideNavbar">
-                <li class="nav-item">
-                    <a class="nav-link  active " href="{{route('dashboard')}}">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"><i class="bi bi-house"></i></span>
-                            <span class="nav-link-text">Dashboard</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item mt-6 mb-3">
-                    <span class="nav-label">Manajemen Toko</span>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('dashboard.product')}}">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
-                            <span class="nav-link-text">Produk</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('dashboard.category')}}">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
-                            <span class="nav-link-text">Kategori</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('dashboard.order')}}">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
-                            <span class="nav-link-text">Pesanan</span>
-                        </div>
-                    </a>
-                </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+                                <span class="nav-link-text">Dashboard</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-6 mb-3">
+                        <span class="nav-label">Manajemen Toko</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('dashboard.product') ? 'active' : '' }}" href="{{ route('dashboard.product') }}">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+                                <span class="nav-link-text">Produk</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('dashboard.category') ? 'active' : '' }}" href="{{ route('dashboard.category') }}">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+                                <span class="nav-link-text">Kategori</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('dashboard.order') ? 'active' : '' }}" href="{{ route('dashboard.order') }}">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                                <span class="nav-link-text">Pesanan</span>
+                            </div>
+                        </a>
+                    </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse"
                         data-bs-target="#navCategoriesOrders" aria-expanded="false"
@@ -81,7 +82,7 @@
                             <span class="badge bg-light-success text-dark-success ms-2">New</span>
                         </div>
                     </a>
-                    <div id="navCustomer" class="collapse " data-bs-parent="#sideNavbar">
+                    {{-- <div id="navCustomer" class="collapse " data-bs-parent="#sideNavbar">
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link " href="../dashboard/customers.html">Customers</a>
@@ -97,7 +98,7 @@
                                     Customers</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </li>
 
                 <li class="nav-item">
@@ -179,15 +180,15 @@
 <nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
     <div class="navbar-vertical">
         <div class="px-4 py-5 d-flex justify-content-between align-items-center">
-            <a href="../index.html" class="navbar-brand">
-                <img src="../assets/images/logo/freshcart-logo.svg" alt="" />
+            <a href="{{route('home')}}" class="navbar-brand">
+                <img src="{{ asset("assets/images/logo/freshcart-logo.svg") }}" alt="" />
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
             <ul class="navbar-nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link  active " href="../dashboard/index.html">
+                    <a class="nav-link  {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon"><i class="bi bi-house"></i></span>
                             <span>Dashboard</span>
@@ -198,7 +199,7 @@
                     <span class="nav-label">Store Managements</span>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../dashboard/products.html">
+                    <a class="nav-link {{ request()->routeIs('dashboard.product') ? 'active' : '' }}" href="{{ route('dashboard.product') }}">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
                             <span class="nav-link-text">Products</span>

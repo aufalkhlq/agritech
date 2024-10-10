@@ -283,7 +283,7 @@
                    </div>
                 </div>
                 <div class="list-inline-item">
-                   <a href="../pages/signin.html" class="btn btn-dark d-none d-xl-block">Sign In</a>
+                   <a href="{{route('login')}}" class="btn btn-dark d-none d-xl-block">Sign In</a>
                 </div>
              </div>
           </div>

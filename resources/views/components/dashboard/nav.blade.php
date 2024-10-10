@@ -144,8 +144,8 @@
 
                         <div class="dropdown-menu dropdown-menu-end p-0">
                             <div class="lh-1 px-5 py-4 border-bottom">
-                                <h5 class="mb-1 h6">FreshCart Admin</h5>
-                                <small>admindemo@email.com</small>
+                                <h5 class="mb-1 h6">{{Auth::user()->name}}</h5>
+                                <small>{{ Auth::user()->email }}</small>
                             </div>
 
                             <ul class="list-unstyled px-2 py-3">
@@ -161,7 +161,10 @@
                                 </li>
                             </ul>
                             <div class="border-top px-5 py-3">
-                                <a href="#">Log Out</a>
+                                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="btn btn-link p-0 text-decoration-none">Log Out</button>
+                                </form>
                             </div>
                         </div>
                     </li>
